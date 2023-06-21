@@ -4,7 +4,9 @@
 3. FrontEnd - (Bootstrap)
 
 ## Build
+1. Copy example.env to `.env` file and set the `OPENAPI_KEY` to be secret key
 1. Run `docker-compose up --build`
+
 
 ## What
 

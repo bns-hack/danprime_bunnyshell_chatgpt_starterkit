@@ -3,7 +3,7 @@ version: "3.9"
 services:
   backend:
     environment:
-      - OPENAPI_KEY={$OPENAPI_KEY}
+      - OPENAPI_KEY=$OPENAPI_KEY
     build:
       context: .
       dockerfile: Dockerfile.backend

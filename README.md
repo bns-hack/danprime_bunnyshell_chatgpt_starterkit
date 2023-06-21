@@ -8,7 +8,8 @@
 2. Setup Networking between containers (Backend talks to MySQL, Frontend talks to Backend)
 3.
 
-## How
+## Build
+1. Run `docker-compose up --build`
 
 
 ## What

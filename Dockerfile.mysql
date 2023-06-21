@@ -1,0 +1,10 @@
+FROM mysql:8
+
+# Copy the SQL file to initialize the database
+COPY ./init/init.sql /docker-entrypoint-initdb.d/
+
+# Set the data directory for persistence
+VOLUME /var/lib/mysql
+
+# Start MySQL server
+CMD ["mysqld"]

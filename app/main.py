@@ -6,7 +6,14 @@ from pydantic import BaseModel
 class Prompt(BaseModel):
     prompt: str
 
-app = FastAPI()
+app = FastAPI(
+        title="FastAPI Backend ChatGPT with Docs",
+        description="Use it to manage context and documents",
+        version="0.0.1",
+        license_info={
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT",
+            })
 
 @app.get("/")
 def read_root():

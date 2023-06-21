@@ -7,3 +7,12 @@
 1. Setup Docker Container
 2. Setup Networking between containers (Backend talks to MySQL, Frontend talks to Backend)
 3.
+
+## How
+
+
+## What
+
+### Backend FastAPI
+
+`/docs` - Shows documentation of the server

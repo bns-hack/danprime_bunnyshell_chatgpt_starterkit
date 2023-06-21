@@ -14,6 +14,12 @@
 
 ## What
 
+
 ### Backend FastAPI
 
 `/docs` - Shows documentation of the server
+
+### MySQL Backend
+- Connect to it via localhost:1314 root/root
+- Default Database chatgpt_docs setup
+

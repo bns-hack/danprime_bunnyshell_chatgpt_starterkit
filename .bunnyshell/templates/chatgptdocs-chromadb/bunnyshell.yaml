@@ -1,0 +1,49 @@
+kind: Environment
+name: chatgpt_test
+type: primary
+urlHandle: bqnkus
+components:
+    -
+        kind: Application
+        name: backend
+        gitRepo: 'https://github.com/danprime/bunnyshell_chatgpt_docs.git'
+        gitBranch: main
+        gitApplicationPath: /
+        dockerCompose:
+            build:
+                context: .
+                dockerfile: Dockerfile.backend
+            environment:
+                OPENAPI_KEY: ''
+            ports:
+                - '1313:80'
+        hosts:
+            -
+                hostname: 'backend-{{ env.base_domain }}'
+                path: /
+                servicePort: 1313
+    -
+        kind: Database
+        name: mysql
+        gitRepo: 'https://github.com/danprime/bunnyshell_chatgpt_docs.git'
+        gitBranch: main
+        gitApplicationPath: /
+        dockerCompose:
+            build:
+                context: .
+                dockerfile: Dockerfile.mysql
+            environment:
+                MYSQL_ROOT_PASSWORD: root
+            ports:
+                - '1314:3306'
+        volumes:
+            -
+                name: mysql-data
+                mount: /var/lib/mysql
+                subPath: ''
+volumes:
+    -
+        name: mysql-data
+        size: 1Gi
+        type: disk
+

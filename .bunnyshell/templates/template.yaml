@@ -1,0 +1,11 @@
+name: ChatGPT Docs
+description: This is a sample app to prototype ChatGPT with Docs. It is has Python/FastAPI backend, MySQL, FrontEnd
+tags:
+  - openai
+  - chatgpt
+  - chromaDB
+  - python
+  - mysql
+  - vue
+icons: [ 'python', 'mysql', 'vue' ]
+discoverable: true

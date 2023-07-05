@@ -14,7 +14,7 @@ components:
                 context: .
                 dockerfile: Dockerfile.backend
             environment:
-                OPENAPI_KEY: ''
+                OPENAI_API_KEY: ''
             ports:
                 - '1313:80'
         hosts:

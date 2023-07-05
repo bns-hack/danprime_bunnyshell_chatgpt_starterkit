@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 import os
 import openai
-openai.api_key=os.getenv('OPENAPI_KEY')
+openai.api_key=os.getenv('OPENAI_API_KEY')
 
 class Prompt(BaseModel):
     prompt: str

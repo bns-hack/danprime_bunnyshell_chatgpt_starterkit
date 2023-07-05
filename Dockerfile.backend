@@ -5,7 +5,7 @@ WORKDIR /code
 COPY ./backend/requirements.txt /code/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-ARG OPENAPI_KEY
+ARG OPENAI_API_KEY
 
 COPY ./backend /code/app
 

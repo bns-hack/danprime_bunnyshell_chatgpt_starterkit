@@ -1,11 +1,17 @@
-name: ChatGPT Docs
-description: This is a sample app to prototype ChatGPT with Docs. It is has Python/FastAPI backend, MySQL, FrontEnd
+name: ChatGPT Environment
+description: This is an app to prototype ChatGPT. It is has Python/FastAPI backend, MySQL container. All you need is an OpenAI API Key.
 tags:
   - openai
   - chatgpt
-  - chromaDB
   - python
   - mysql
-  - vue
-icons: [ 'python', 'mysql', 'vue' ]
+icons: [ 'python', 'mysql']
+stack:
+  packages:
+    - name: FastAPI
+      version: ''
+    - name: ChatGPT
+      version: ''
+    - name: Python
+      version
 discoverable: true

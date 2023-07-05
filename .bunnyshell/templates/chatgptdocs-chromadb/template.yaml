@@ -1,4 +1,4 @@
-name: ChatGPT Environment
+name: ChatGPT Starter Kit Environment
 description: This is an app to prototype ChatGPT. It is has Python/FastAPI backend, MySQL container. All you need is an OpenAI API Key.
 tags:
   - openai

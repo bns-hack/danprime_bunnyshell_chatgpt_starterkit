@@ -9,9 +9,7 @@ icons: [ 'python', 'mysql']
 stack:
   packages:
     - name: FastAPI
-      version: ''
-    - name: ChatGPT
-      version: ''
+      version: '0.97.0'
     - name: Python
-      version: ''
+      version: '3.11'
 discoverable: true

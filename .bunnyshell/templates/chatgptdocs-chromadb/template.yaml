@@ -13,5 +13,5 @@ stack:
     - name: ChatGPT
       version: ''
     - name: Python
-      version
+      version: ''
 discoverable: true

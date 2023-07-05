@@ -43,5 +43,14 @@ async def read_root():
 
 @app.post("/prompt")
 async def incoming_prompt(prompt: Prompt):
+    model_engine = "text-davinci-003"
+    completion = openai.Completion.create(
+            engine=model_engine,
+            prompt=prompt.prompt,
+            max_tokens=100,
+            n=1,
+            stop=None,
+            temperature=0.5,
+            )
     #TODO: log incoming and outgoing data
-    return prompt
+    return completion

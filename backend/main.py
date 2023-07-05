@@ -11,8 +11,8 @@ class Prompt(BaseModel):
     prompt: str
 
 app = FastAPI(
-        title="FastAPI Backend ChatGPT with Docs",
-        description="Use it to manage context and documents",
+        title="FastAPI Backend ChatGPT",
+        description="A base for ChatGPT apps",
         version="0.0.1",
         license_info={
             "name": "MIT",
@@ -22,10 +22,6 @@ app = FastAPI(
 @app.get("/")
 def read_root():
     return {"Hello":"World"}
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None]=None):
-    return {"item_id": item_id, "q":q}
 
 @app.get("/chatgpttest")
 async def read_root():

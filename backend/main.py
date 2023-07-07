@@ -23,7 +23,7 @@ app = FastAPI(
 def read_root():
     return {"Hello":"World"}
 
-@app.get("/chatgpttest")
+@app.get("/chatgpttest-hello")
 async def read_root():
     model_engine = "text-davinci-003"
     prompt = "Hello, how are you today?"
@@ -36,6 +36,20 @@ async def read_root():
             temperature=0.5,
             )
     return completion
+
+@app.get("/knocknockgpt")
+async def read_root():
+    model_engine = "text-davinci-003"
+    prompt = "Tell me 3 knock knock jokes with a chicken pun"
+    completion = openai.Completion.create(
+            engine=model_engine,
+            prompt=prompt,
+            max_tokens=100,
+            n=1,
+            stop=None,
+            temperature=0.5,
+            )
+    return completion.choices[0].text
 
 @app.post("/prompt")
 async def incoming_prompt(prompt: Prompt):

@@ -3,6 +3,7 @@ FROM python:3.11
 WORKDIR /code
 
 COPY ./backend/requirements.txt /code/requirements.txt
+COPY ./backend/dev.sh /code/dev.sh
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 ARG OPENAI_API_KEY

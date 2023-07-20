@@ -1,12 +1,11 @@
 kind: Environment
 name: chatgpt_test
 type: primary
-urlHandle: bqnkus
 components:
     -
         kind: Application
         name: backend
-        gitRepo: 'https://github.com/danprime/bunnyshell_chatgpt_starterkit.git'
+        gitRepo: 'https://github.com/bns-hack/danprime_bunnyshell_chatgpt_starterkit.git'
         gitBranch: main
         gitApplicationPath: /
         dockerCompose:
@@ -25,7 +24,7 @@ components:
     -
         kind: Database
         name: mysql
-        gitRepo: 'https://github.com/danprime/bunnyshell_chatgpt_starterkit.git'
+        gitRepo: 'https://github.com/bns-hack/danprime_bunnyshell_chatgpt_starterkit.git'
         gitBranch: main
         gitApplicationPath: /
         dockerCompose:
